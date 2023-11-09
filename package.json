@@ -1,0 +1,12 @@
+{
+  "name": "curso_backend",
+  "version": "1.0.0",
+  "description": "Uma tentativa de refazer o trabalho passado no curso. Já que não consegui utilizar o Thunder Client na máquina virtual do GH.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
