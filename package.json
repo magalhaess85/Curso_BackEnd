@@ -4,9 +4,12 @@
   "description": "Uma tentativa de refazer o trabalho passado no curso. Já que não consegui utilizar o Thunder Client na máquina virtual do GH.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Igor Magalhães",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
