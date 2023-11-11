@@ -23,7 +23,7 @@ const lista = ["Rick Sanchez", "Morty Smith", "Summer Smith"]
 
 // Read ALL - [GET] /item 
 app.get("/item", function(req, res){
-    res.send(lista);
+    res.send(lista.filter(Boolean));
 });
 
 // Read by ID - [GET] /item/:id
@@ -67,6 +67,18 @@ app.put("/item/:id", function(req, res){
 
     // Enviamos uma mensagem de sucesso.
     res.send("Item atualizado com sucesso!");
+});
+
+// Delete - [DELETE] /item/:id
+app.delete("/item/:id", function(req, res){
+    // Obtemos o ID do parâmetro de rota.
+    const id = req.params.id - 1;
+
+    // Removemos o item da lista
+    delete lista[id];
+
+    // Enviamos uma mensagem de sucesso
+    res.send("Item removido com sucesso!");
 });
 
 app.listen(3000, console.log("Servidor rodando em http://localhost:3000")); 
