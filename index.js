@@ -51,4 +51,22 @@ app.post("/item", function(req, res){
     res.send("Item adicionado com sucesso!");
 });
 
-app.listen(3000, console.log("Servidor rodando em http://localhost:3000"));
+// Update - [PUT] /item
+app.put("/item/:id", function(req, res){
+    // Obtemos o ID do parâmetro de rota e fazemos
+    // a correção do índice.
+    const id = req.params.id - 1;
+
+    // Obtemos o novo índice a ser atualizado.
+    const novoItem = req.body.nome;
+
+    // Atualizamos o valor recebido na lista, usando 
+    // a posição ID para garantir que atualizamos
+    // o item correto.
+    lista[id] = novoItem;
+
+    // Enviamos uma mensagem de sucesso.
+    res.send("Item atualizado com sucesso!");
+});
+
+app.listen(3000, console.log("Servidor rodando em http://localhost:3000")); 
